@@ -32,7 +32,16 @@ async def yoyo(ctx):
     for x in range (1,10):
         await ctx.send("harry is a shamless tinker picker")
     await ctx.send("hes also only 2k")
-    
+
+@bot.command()
+async def hero(ctx):
+    """does pick a random hero"""
+    file = open('heroes.txt', 'r')
+    list1 = list(file.readlines())
+    file.close()
+    H = random.choice(list1)
+    await ctx.send(H)
+
 @bot.command(pass_context = True)
 async def yo(ctx):
     """does antoher thing"""
