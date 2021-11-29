@@ -24,11 +24,19 @@ async def on_ready():
 @bot.command()
 async def yoyoyo(ctx):
     """Says something"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     await ctx.send("harry is a shamless tinker picker")
 
 @bot.command()
 async def yoyo(ctx):
     """does something"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     for x in range (1,10):
         await ctx.send("harry is a shamless tinker picker")
     await ctx.send("hes also only 2k")
@@ -36,6 +44,10 @@ async def yoyo(ctx):
 @bot.command()
 async def hero(ctx):
     """does pick a random hero"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     file = open('heroes.txt', 'r')
     list1 = list(file.readlines())
     file.close()
@@ -45,16 +57,28 @@ async def hero(ctx):
 @bot.command(pass_context = True)
 async def yo(ctx):
     """does antoher thing"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     await ctx.send(file=discord.File('image.png'))
 
 @bot.command(pass_context = True)
 async def asdf(ctx):
     """use on weirdos"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     await ctx.send('what is wrong with you', file=discord.File('weird2.jpeg'))
 
 @bot.command(pass_context = True)
 async def food(ctx):
     """use when hungry"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     imgStr = random.choice(images)
     path = "./food/" + imgStr
     await ctx.send(file=discord.File(path))
@@ -62,6 +86,10 @@ async def food(ctx):
 @bot.command()
 async def add(ctx, *args):
     """Adds numbers together."""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
     if len(args) == 0:
         await ctx.send("you're stupid lol")
         return
