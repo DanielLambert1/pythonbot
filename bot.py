@@ -73,6 +73,15 @@ async def asdf(ctx):
     await ctx.send('what is wrong with you', file=discord.File('weird2.jpeg'))
 
 @bot.command(pass_context = True)
+async def what(ctx):
+    """use on matthew"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1')
+        f.close()
+    await ctx.send('?', file=discord.File('questionmark.jpeg'))
+
+@bot.command(pass_context = True)
 async def food(ctx):
     """use when hungry"""
     with open ('counter.txt','r+') as f:
