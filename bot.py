@@ -77,9 +77,28 @@ async def what(ctx):
     """use on matthew"""
     with open ('counter.txt','r+') as f:
         print(f.read())
-        f.write('1')
+        f.write('1') 
         f.close()
     await ctx.send('?', file=discord.File('questionmark.jpeg'))
+
+@bot.command(pass_context = True)
+async def respect(ctx):
+    """use on anyone"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1') 
+        f.close()
+    await ctx.send('respect innit', file=discord.File('respect.png'))
+
+@bot.command(pass_context = True)
+async def repect(ctx):
+    """use on anyone"""
+    with open ('counter.txt','r+') as f:
+        print(f.read())
+        f.write('1') 
+        f.close()
+    await ctx.send(file=discord.File('moron .png'))
+
 
 @bot.command(pass_context = True)
 async def food(ctx):
