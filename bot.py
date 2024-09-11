@@ -138,4 +138,5 @@ async def add(ctx, *args):
     except:
         await ctx.send('are you stupid')
         
+        
 bot.run(TOKEN)
